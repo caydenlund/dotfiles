@@ -121,7 +121,7 @@ alias mount-onedrive="rclone --vfs-cache-mode writes mount OneDrive: ~/OneDrive"
 alias pptx-to-pdf="soffice --headless --convert-to pdf"
 
 #  Dotfile configuration alias.
-alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+alias cfg='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 
 #  =========================
