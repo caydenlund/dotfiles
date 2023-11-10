@@ -41,6 +41,9 @@ export VISUAL=nvim
 #  Add the GPG signing key.
 export GPG_TTY=$(tty)
 
+#  Set `HOSTNAME` to be the same as Bash.
+export HOSTNAME=$HOST
+
 #  Configure $PATH.
 PATH=$PATH:~/.local/bin
 PATH=$PATH:~/.local/share/JetBrains/Toolbox/scripts
