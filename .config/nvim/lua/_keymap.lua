@@ -5,6 +5,7 @@ vim.keymap.set("n", "<leader>.", ":noh<cr>", { desc = "Stop highlighting search 
 vim.keymap.set("n", "<leader>l", "/.\\{80\\}<cr>", { desc = "Search for lines over 80 chars." })
 vim.keymap.set("n", "<leader>t", "/TODO<cr>", { desc = "Search for TODO comments." })
 vim.keymap.set("n", "<leader>f", ":lua vim.lsp.buf.format { async = true }<cr>", { desc = "Format the file." })
+vim.keymap.set("n", "<leader>v", ":vnew<cr>", { desc = "New, empty vertical split." })
 vim.keymap.set("t", "<esc>", "<c-\\><c-n>", { desc = "Switch to normal mode." })
 
 vim.fn.setreg("u", "kdw")
