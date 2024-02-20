@@ -34,6 +34,13 @@ bindkey "^[[3~" delete-char
 #  ||  Environment variables:  ||
 #  ==============================
 
+#  Set the XDG directories.
+export XDG_CACHE_HOME="$HOME/.cache"
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_STATE_HOME="$HOME/.local/state"
+
+
 #  Configure the default editor.
 export EDITOR=nvim
 export VISUAL=nvim
@@ -44,9 +51,11 @@ export GPG_TTY=$(tty)
 #  Set `HOSTNAME` to be the same as Bash.
 export HOSTNAME=$HOST
 
+#  Add an entry for the CADE lab.
+export CADE23="u1182408@lab1-23.eng.utah.edu"
+
 #  Configure $PATH.
-PATH=$PATH:~/.local/bin
-PATH=$PATH:~/.local/share/JetBrains/Toolbox/scripts
+PATH=$PATH:$HOME/.local/bin:$XDG_DATA_HOME/JetBrains/Toolbox/scripts:$HOME/.nix-profile/bin
 
 #  Prompt configuration.
 #  Common options:
@@ -126,11 +135,14 @@ alias pptx-to-pdf="soffice --headless --convert-to pdf"
 #  Dotfile configuration alias.
 alias cfg='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
+#  `ls` use colors.
+alias ls="ls --color=auto"
+
+#  Create or attach to zellij instance `main`:
+alias zz='if [[ -z "$ZELLIJ" ]]; then zellij attach main || zellij -s main; fi'
 
 #  =========================
 #  ||  Startup commands:  ||
 #  =========================
 
-    #  Create or attach to zellij instance `main`:
-if [[ -z "$ZELLIJ" ]]; then zellij attach main || zellij -s main; fi
 
